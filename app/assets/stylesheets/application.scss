@@ -16,18 +16,26 @@
 @import "bootstrap";
 
 body {
-    background: rgba(0, 150, 136, 0.3);
-    font-family: 'Fresca', sans-serif;
-    color: #000000;
+    background: #8BC34A;
+    font-family: 'Martel Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+.logo {
+	height: 40px;
+	width: 36px;
+	background-color: #009688;
+	padding: 3px;
 }
 
 a {
-	color: #000000;	
+    color: #FFFFFF;
+    line-height: 40px;
 }
 
 a:focus, a:hover {
 	text-decoration: none;
-    color: #009688;
+    color: #212121;
 }
 
 .sign-in {
@@ -46,7 +54,7 @@ a:focus, a:hover {
 
 .nav-tabs {
     border-bottom: 1px solid #BDBDBD;
-//    background-color: #512DA8;
+    background-color: #689F38;
 }
 
 .nav-links {
@@ -55,7 +63,7 @@ a:focus, a:hover {
 }
 
 .navbar-link {
-	color: #000000;
+	color: #FFFFFF;
 }
 
 .user-status {
