@@ -1,1 +1,15 @@
-I'm the stuff <strong><%= "\"#{@user.email}\"" %></strong> needs to do!
+<div>
+    I'm the stuff <strong><%= "\"#{@user.email}\"" %></strong> needs to do!
+</div>
+
+<%= link_to "New Item", new_user_item_path(@user.id), class: 'btn btn-success' %>
+
+<div>
+    <% if @user.items.count < 1 %>
+        <%= "#{@user.email} has no items to complete right now." %>
+    <% else %>
+        <% @user.items.each do |item| %>
+            <%= render partial: 'items/item', locals: { item: item } %>
+        <% end %>
+    <% end %>
+</div>
