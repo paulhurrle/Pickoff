@@ -1,5 +1,4 @@
-<%= form_for [item] do |f| %>
-
+<%= form_for [current_user, item] do |f| %>
     <% if item.errors.any? %>
         <div class="alert alert-danger">
             <h4><%= pluralize(item.errors.count, "error") %>.</h4>
@@ -11,10 +10,10 @@
         </div>
     <% end %>
     
-    <%= form_group_tag(item.errors[:name]) do %>
+    <%#= form_group_tag(item.errors[:name]) do %>
         <%= f.label :name %>
-        <%= f.text_area :name, rows: 8, class: 'form-control', placeholder: "Enter item" %>
-    <% end %>
+        <%= f.text_field :name, rows: 1, class: 'form-control', placeholder: "Enter item" %>
+    <%# end %>
     <div class="form-group">
         <%= f.submit "Save", class: 'btn btn-success' %>
     </div>
