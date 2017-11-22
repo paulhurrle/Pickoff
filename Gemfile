@@ -27,3 +27,5 @@ gem 'turbolinks'
 gem 'figaro', '1.0'
 # Devise as the authentication system
 gem 'devise'
+# Faker for database seeding
+gem 'faker'
