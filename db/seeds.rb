@@ -9,23 +9,16 @@ require 'faker'
 
 # Create users
 User.create!(
+    first_name: 'Paul',
+    last_name: 'Hurrle',
     email: 'paul_hurrle@yahoo.com',
-    password: 'password',
-    )
-
-User.create!(
-    email: 'paul_nikki@cox.net',
-    password: 'password',
-    )
-
-User.create!(
-    email: 'paulnicolahurrle@gmail.com',
     password: 'password',
     )
 
 10.times do
    User.create!(
-#       name: Faker::Name.name,
+       first_name: Faker::Name.first_name,
+       last_name: Faker::Name.last_name,
        email: Faker::Internet.email,
        password: 'password',
        ) 

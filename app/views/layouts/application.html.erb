@@ -15,7 +15,8 @@
 <!--                <li><%= link_to "Pickoff", root_path %></li>-->
                 <div class="user-status">
                     <% if current_user %>
-                        Signed in as: <strong><%= link_to current_user.email, edit_user_registration_path %></strong>
+                        <strong>Hello, <%= link_to current_user.first_name, edit_user_registration_path %></strong>
+                        <%= link_to "To Do Items", user_path(current_user.id) %>
                         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'nav-links' %>
                     <% else %>
                         <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %>

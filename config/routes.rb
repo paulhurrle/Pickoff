@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
     get 'home/index'
-
+    
     resources :users do
       resources :items, only: [:create, :new]
     end
 
-    devise_for :users
+    devise_for :users, :controllers => { registrations: 'registrations' }
     
     root 'home#index'
     # The priority is based upon order of creation: first created -> highest priority.
