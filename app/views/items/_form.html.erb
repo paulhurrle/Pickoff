@@ -10,10 +10,10 @@
         </div>
     <% end %>
     
-    <%#= form_group_tag(item.errors[:name]) do %>
+    <%= form_group_tag(item.errors[:name]) do %>
         <%= f.label :name %>
         <%= f.text_field :name, rows: 1, class: 'form-control', placeholder: "Enter item" %>
-    <%# end %>
+    <% end %>
     <div class="form-group">
         <%= f.submit "Save", class: 'btn btn-success' %>
     </div>
