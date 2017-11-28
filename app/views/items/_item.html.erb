@@ -1,4 +1,4 @@
 <h4 class="media-heading" id="<%=item.id%>">
 	<%= item.name %>
-	<%= link_to "[-]", user_item_path(item.user_id, item.id), method: :delete, class: 'glyphicon glyphicon-remove', style: "color: red;", remote: true, data: { confirm: 'Are you sure?' } %>
+	<%= link_to "", user_item_path(item.user_id, item.id), method: :delete, class: 'glyphicon glyphicon-remove', style: "color: red;", remote: true, data: { confirm: 'Are you sure?' } %>
 </h4>
