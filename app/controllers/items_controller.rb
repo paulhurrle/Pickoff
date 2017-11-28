@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-    
+	
     def new
         @item = Item.new
     end
@@ -15,6 +15,11 @@ class ItemsController < ApplicationController
           flash.now[:alert] = "There was an error saving the item. Please try again."
         end
         redirect_to @item.user
+    end
+    
+    def destroy
+        @item = Item.find(params[:id])
+        @item.delete
     end
     
     private
