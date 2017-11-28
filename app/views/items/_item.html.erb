@@ -2,6 +2,9 @@
     <div class="media-body">
         <h4 class="media-heading">
             <%= item.name %>
+			<small>
+				--- Expires in <%= distance_of_time_in_words(Time.now, item.expires_at, include_seconds: true) %>
+			</small>
         </h4>
     </div>
 </div>

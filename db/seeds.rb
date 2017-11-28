@@ -31,7 +31,8 @@ users = User.all #grabs all users for sampling below
        name: Faker::Movie.quote,
        )
     
-    item.update_attribute(:created_at, Faker::Time.between(1.year.ago, Time.now, :all))
+    item.update_attribute(:created_at, Faker::Time.between(1.week.ago, Time.now, :all))
+	item.update_attribute(:expires_at, item.created_at + 7.days)
 end
 
 puts "Seed finished"
