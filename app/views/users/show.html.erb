@@ -5,10 +5,7 @@
         <%= "#{@user.first_name} #{@user.last_name} has no items to complete right now." %>
     <% else %>
 		<% @user.items.each do |item| %>
-			<div id="item_grid">
-				<%= render partial: 'items/item', locals: { item: item }, remote: true %>
-			</div>
-		<% end %>
-        
+			<%= render partial: 'items/item', locals: { item: item }, remote: true %>
+		<% end %> 
     <% end %>
 </div>
