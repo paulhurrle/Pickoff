@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+	before_save :expired
 	
     def new
         @item = Item.new
@@ -27,4 +28,8 @@ class ItemsController < ApplicationController
     def item_params
         params.require(:item).permit(:name)
     end
+	
+	def expired
+		Item.where("expires_at <= ?", Time.now).destroy_all
+	end
 end

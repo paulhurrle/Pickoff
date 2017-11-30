@@ -2,6 +2,10 @@
 	<%= item.name %>
 	<%= link_to "", user_item_path(item.user_id, item.id), method: :delete, class: 'glyphicon glyphicon-ok', style: "color: green;", remote: true, data: { confirm: 'Are you sure?' } %>
 	<small>
-		Expires in <%= distance_of_time_in_words(Time.now, item.expires_at, include_seconds: true) %>
+		<% if item.expires_at <= Time.now %>
+			<span style="color: red;">Expired</span>
+		<% else %>
+			Expires in <%= distance_of_time_in_words(Time.now, item.expires_at, include_seconds: true) %>
+		<% end %>
 	</small>
 </h4>
